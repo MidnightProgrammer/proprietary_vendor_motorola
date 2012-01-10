@@ -1,0 +1,7 @@
+#!/system/bin/sh
+# Simple wrapper to stop rild from starting until everything else is done
+# this is needed for GSM/Global mode to work correctly
+# /system/bin/motorild is the original rild binary
+
+/system/xbin/busybox sleep 60s
+/system/bin/motorild
